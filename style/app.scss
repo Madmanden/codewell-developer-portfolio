@@ -238,10 +238,12 @@ body {
     //margin: 0 40px;
   }
 
+  .logo {
+    width: 220px;
+  }
+
   .main-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    //display: flex;
     max-width: 768px;
     max-width: 1220px;
     padding-left: 40px;
@@ -250,23 +252,18 @@ body {
     &__navlist {
       display: flex;
       justify-content: center;
-      align-items: center;
+      //width: 100%;
 
       & ul {
+        display: flex;
+        gap: 24px;
         list-style: none;
         padding: 0;
-        //display: flex;
         color: $lightgray;
         font-family: Inter;
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
-
-        & li {
-          margin-left: auto;
-          margin-right: auto;
-          padding-right: 10px;
-        }
       }
     }
   }

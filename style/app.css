@@ -259,16 +259,10 @@ body {
     max-width: 768px;
     max-width: 1220px;
   }
+  .logo {
+    width: 220px;
+  }
   .main-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     max-width: 768px;
     max-width: 1220px;
     padding-left: 40px;
@@ -281,11 +275,12 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .main-header__navlist ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 24px;
     list-style: none;
     padding: 0;
     color: #adadad;
@@ -293,11 +288,6 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-  }
-  .main-header__navlist ul li {
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 10px;
   }
   .hero {
     max-width: 768px;

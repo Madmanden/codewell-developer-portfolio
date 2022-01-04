@@ -28,7 +28,7 @@ body {
   display: -ms-grid;
   display: grid;
   width: 100%;
-  max-width: 428px;
+  max-width: 768px;
   /* height: 3404px; */
   margin: 0 auto;
   background-color: black;
@@ -39,7 +39,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 428px;
+  max-width: 768px;
   height: 104px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -54,14 +54,18 @@ body {
   padding: 40px 20px;
 }
 
-.main-header__nav {
+.main-header__hamburger {
   line-height: 1;
   cursor: pointer;
 }
 
-.main-header__nav img {
+.main-header__hamburger img {
   width: 24px;
   height: 20px;
+}
+
+.main-header__navlist {
+  display: none;
 }
 
 .logo {
@@ -109,7 +113,7 @@ body {
 
 .hero {
   width: 100%;
-  max-width: 428px;
+  max-width: 768px;
   padding: 0 20px;
 }
 
@@ -129,7 +133,7 @@ body {
 
 .companies {
   width: 100%;
-  max-width: 388px;
+  max-width: 768px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,7 +165,7 @@ body {
 .projects__image img {
   margin: 0;
   width: 100%;
-  max-width: 388px;
+  max-width: 768px;
 }
 
 .projects__header {
@@ -180,6 +184,11 @@ body {
 .co-founder {
   background-color: #2e3038;
   padding: 64px 20px;
+  color: #adadad;
+}
+
+.co-founder p {
+  padding-bottom: 24px;
 }
 
 .co-founder__header {
@@ -192,24 +201,17 @@ body {
   padding-bottom: 12px;
 }
 
-.co-founder__body {
-  color: #adadad;
-}
-
-.co-founder__body p {
-  padding-bottom: 27px;
-}
-
-.co-founder__body p:nth-child(2) {
+.co-founder__body1 p:last-child {
   padding-bottom: 80px;
 }
 
-.co-founder__body p:last-child {
+.co-founder__body2 p:last-child {
   padding-bottom: 0;
 }
 
 .working {
   padding: 80px 20px;
+  max-width: 543px;
 }
 
 .working__header {
@@ -236,7 +238,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 24px 40px;
-  max-width: 428px;
+  max-width: 768px;
   min-height: 72px;
   background-color: #2e3038;
 }
@@ -252,14 +254,50 @@ body {
   padding-left: 16px;
 }
 
-@media screen and (min-width: 428px) {
+@media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+    max-width: 1220px;
   }
   .main-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 768px;
+    max-width: 1220px;
     padding-left: 40px;
     padding-right: 40px;
+  }
+  .main-header__navlist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-header__navlist ul {
+    list-style: none;
+    padding: 0;
+    color: #adadad;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .main-header__navlist ul li {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
   }
   .hero {
     max-width: 768px;
@@ -272,10 +310,15 @@ body {
   }
   .companies {
     max-width: 688px;
+    max-width: 1220px;
     -webkit-column-gap: 97px;
             column-gap: 97px;
   }
   .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 80px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -284,6 +327,7 @@ body {
   }
   .projects__image img {
     max-width: 768px;
+    max-width: 1220px;
   }
   .co-founder {
     padding-left: 40px;
@@ -293,10 +337,71 @@ body {
     margin-left: 40px;
     padding-left: 0;
     padding-right: 0;
-    max-width: 543px;
+  }
+  .btn--removed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-header__hamburger {
+    display: none;
   }
   .main-footer {
     max-width: 768px;
+    max-width: 1220px;
+  }
+}
+
+@media screen and (min-width: 1210px) {
+  .container {
+    max-width: 1440px;
+  }
+  .main-header {
+    max-width: 1440px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .hero {
+    max-width: 890px;
+    padding-left: 150px;
+  }
+  .hero__header {
+    font-size: 56px;
+    line-height: 72px;
+  }
+  .companies {
+    max-width: 1440px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .projects {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .projects__card {
+    padding: 0 0 56px 0;
+  }
+  .projects__image img {
+    max-width: 1440px;
+  }
+  .co-founder {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 80px;
+  }
+  .working {
+    margin-left: 150px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main-footer {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 1440px;
   }
 }
 /*# sourceMappingURL=app.css.map */

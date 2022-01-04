@@ -4,6 +4,8 @@ $button: #fbe850;
 
 // TO DO:
 // - Fix font duplication
+// - Fix grid setup
+// - Fix responsive breakpoints - minmax, clamp?
 
 *,
 *:before,
@@ -35,7 +37,7 @@ body {
 .container {
   display: grid;
   width: 100%;
-  max-width: 428px;
+  max-width: 768px;
   /* height: 3404px; */
   margin: 0 auto;
   background-color: black;
@@ -44,20 +46,24 @@ body {
 .main-header {
   display: flex;
   width: 100%;
-  max-width: 428px;
+  max-width: 768px;
   height: 104px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 40px 20px;
-}
 
-.main-header__nav {
-  line-height: 1;
-  cursor: pointer;
-  & img {
-    width: 24px;
-    height: 20px;
+  &__hamburger {
+    line-height: 1;
+    cursor: pointer;
+    & img {
+      width: 24px;
+      height: 20px;
+    }
+  }
+
+  &__navlist {
+    display: none;
   }
 }
 
@@ -100,7 +106,7 @@ body {
 
 .hero {
   width: 100%;
-  max-width: 428px;
+  max-width: 768px;
   padding: 0 20px;
   &__header {
     font-family: Prata;
@@ -119,7 +125,7 @@ body {
 
 .companies {
   width: 100%;
-  max-width: 388px;
+  max-width: 768px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -140,7 +146,7 @@ body {
     & img {
       margin: 0;
       width: 100%;
-      max-width: 388px;
+      max-width: 768px;
     }
   }
 
@@ -161,6 +167,10 @@ body {
 .co-founder {
   background-color: $gray;
   padding: 64px 20px;
+  color: $lightgray;
+  & p {
+    padding-bottom: 24px;
+  }
 
   &__header {
     font-family: Prata;
@@ -172,24 +182,17 @@ body {
     padding-bottom: 12px;
   }
 
-  &__body {
-    color: $lightgray;
-    & p {
-      padding-bottom: 27px;
-    }
-
-    & p:nth-child(2) {
-      padding-bottom: 80px;
-    }
-
-    & p:last-child {
-      padding-bottom: 0;
-    }
+  &__body1 p:last-child {
+    padding-bottom: 80px;
+  }
+  &__body2 p:last-child {
+    padding-bottom: 0;
   }
 }
 
 .working {
   padding: 80px 20px;
+  max-width: 543px;
   &__header {
     font-family: Prata;
     font-weight: 400;
@@ -209,7 +212,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 24px 40px;
-  max-width: 428px;
+  max-width: 768px;
   min-height: 72px;
   background-color: $gray;
 
@@ -228,20 +231,49 @@ body {
 //
 ////////////////////////////////////////////////////////////////////////////
 
-@media screen and (min-width: 428px) {
+@media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+    max-width: 1220px;
     //margin: 0 40px;
   }
 
   .main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 768px;
+    max-width: 1220px;
     padding-left: 40px;
     padding-right: 40px;
+
+    &__navlist {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & ul {
+        list-style: none;
+        padding: 0;
+        //display: flex;
+        color: $lightgray;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+
+        & li {
+          margin-left: auto;
+          margin-right: auto;
+          padding-right: 10px;
+        }
+      }
+    }
   }
 
   .hero {
     max-width: 768px;
+
     padding-left: 40px;
     padding-right: 53px;
     &__header {
@@ -252,10 +284,13 @@ body {
 
   .companies {
     max-width: 688px;
+    max-width: 1220px;
     column-gap: 97px;
   }
 
   .projects {
+    display: flex;
+    gap: 80px;
     padding-left: 40px;
     padding-right: 40px;
     &__card {
@@ -264,6 +299,7 @@ body {
     &__image {
       & img {
         max-width: 768px;
+        max-width: 1220px;
       }
     }
   }
@@ -277,10 +313,87 @@ body {
     margin-left: 40px;
     padding-left: 0;
     padding-right: 0;
-    max-width: 543px;
+  }
+
+  .btn--removed {
+    display: flex;
+  }
+
+  .main-header__hamburger {
+    display: none;
   }
 
   .main-footer {
     max-width: 768px;
+    max-width: 1220px;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////
+//
+//   DESKTOP MEDIA QUERIES
+//
+////////////////////////////////////////////////////////////////////////////
+
+@media screen and (min-width: 1210px) {
+  .container {
+    max-width: 1440px;
+    //margin: 0 40px;
+  }
+
+  .main-header {
+    max-width: 1440px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .hero {
+    max-width: 890px;
+    padding-left: 150px;
+    //padding-right: 53px;
+    &__header {
+      font-size: 56px;
+      line-height: 72px;
+    }
+  }
+
+  .companies {
+    max-width: 1440px;
+    padding-left: 0;
+    padding-right: 0;
+    //column-gap: 97px;
+  }
+
+  .projects {
+    padding-left: 150px;
+    padding-right: 150px;
+    &__card {
+      padding: 0 0 56px 0;
+    }
+    &__image {
+      & img {
+        max-width: 1440px;
+      }
+    }
+  }
+
+  .co-founder {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 0;
+    display: flex;
+    gap: 80px;
+  }
+
+  .working {
+    margin-left: 150px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-footer {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 1440px;
   }
 }

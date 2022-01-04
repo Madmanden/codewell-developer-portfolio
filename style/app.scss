@@ -6,6 +6,7 @@ $button: #fbe850;
 // - Fix font duplication
 // - Fix grid setup
 // - Fix responsive breakpoints - minmax, clamp?
+// - Clamp padding/margin?
 
 *,
 *:before,
@@ -37,7 +38,7 @@ body {
 .container {
   display: grid;
   width: 100%;
-  max-width: 768px;
+  max-width: 812px;
   /* height: 3404px; */
   margin: 0 auto;
   background-color: black;
@@ -46,7 +47,7 @@ body {
 .main-header {
   display: flex;
   width: 100%;
-  max-width: 768px;
+  max-width: 812px;
   height: 104px;
   flex-direction: row;
   justify-content: space-between;
@@ -107,7 +108,7 @@ body {
 
 .hero {
   width: 100%;
-  max-width: 768px;
+  max-width: 812px;
   padding: 0 20px;
   &__header {
     font-family: Prata;
@@ -126,7 +127,7 @@ body {
 
 .companies {
   width: 100%;
-  max-width: 768px;
+  max-width: 812px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -147,7 +148,7 @@ body {
     & img {
       margin: 0;
       width: 100%;
-      max-width: 768px;
+      max-width: 812px;
     }
   }
 
@@ -213,7 +214,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 24px 40px;
-  max-width: 768px;
+  max-width: 812px;
   min-height: 72px;
   background-color: $gray;
 
@@ -232,9 +233,9 @@ body {
 //
 ////////////////////////////////////////////////////////////////////////////
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 812px) {
   .container {
-    max-width: 768px;
+    max-width: 812px;
     max-width: 1220px;
     //margin: 0 40px;
   }
@@ -245,14 +246,14 @@ body {
 
   .main-header {
     //display: flex;
-    max-width: 768px;
+    max-width: 812px;
     max-width: 1220px;
     padding-left: 40px;
     padding-right: 40px;
 
     &__navlist {
       display: flex;
-      justify-content: center;
+      justify-content: center; // needed?
       //width: 100%;
 
       & ul {
@@ -271,7 +272,7 @@ body {
   }
 
   .hero {
-    max-width: 768px;
+    max-width: 812px;
 
     padding-left: 40px;
     padding-right: 53px;
@@ -297,7 +298,7 @@ body {
     }
     &__image {
       & img {
-        max-width: 768px;
+        max-width: 812px;
         max-width: 1220px;
       }
     }
@@ -315,7 +316,7 @@ body {
   }
 
   .btn--removed {
-    display: flex;
+    display: block;
   }
 
   .main-header__hamburger {
@@ -323,7 +324,7 @@ body {
   }
 
   .main-footer {
-    max-width: 768px;
+    max-width: 812px;
     max-width: 1220px;
   }
 }

@@ -27,6 +27,7 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
+  width: 100%;
   max-width: 428px;
   /* height: 3404px; */
   margin: 0 auto;
@@ -37,7 +38,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 428px;
+  width: 100%;
+  max-width: 428px;
   height: 104px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -52,6 +54,11 @@ body {
   padding: 40px 20px;
 }
 
+.main-header__nav {
+  line-height: 1;
+  cursor: pointer;
+}
+
 .main-header__nav img {
   width: 24px;
   height: 20px;
@@ -63,6 +70,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
+  width: 100%;
 }
 
 .btn {
@@ -90,8 +98,8 @@ body {
   border: none;
 }
 
-btn:hover,
-btn:focus {
+.btn:hover,
+.btn:focus {
   cursor: pointer;
 }
 
@@ -100,8 +108,9 @@ btn:focus {
 }
 
 .hero {
-  padding: 20px;
-  padding-top: 0;
+  width: 100%;
+  max-width: 428px;
+  padding: 0 20px;
 }
 
 .hero__header {
@@ -119,6 +128,7 @@ btn:focus {
 }
 
 .companies {
+  width: 100%;
   max-width: 388px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,7 +146,8 @@ btn:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 24px;
-  padding: 80px 20px;
+  padding: 80px 30px;
+  margin: 0 auto;
 }
 
 .projects {
@@ -144,13 +155,12 @@ btn:focus {
 }
 
 .projects__card {
-  padding: 20px;
-  padding-top: 0;
-  padding-bottom: 56px;
+  padding: 0 20px 56px 20px;
 }
 
 .projects__image img {
   margin: 0;
+  width: 100%;
   max-width: 388px;
 }
 
@@ -179,6 +189,7 @@ btn:focus {
   font-size: 36px;
   line-height: 49px;
   color: #ffffff;
+  padding-bottom: 12px;
 }
 
 .co-founder__body {
@@ -187,6 +198,14 @@ btn:focus {
 
 .co-founder__body p {
   padding-bottom: 27px;
+}
+
+.co-founder__body p:nth-child(2) {
+  padding-bottom: 80px;
+}
+
+.co-founder__body p:last-child {
+  padding-bottom: 0;
 }
 
 .working {
@@ -213,16 +232,23 @@ btn:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 24px 40px;
-  width: 428px;
-  height: 72px;
+  max-width: 428px;
+  min-height: 72px;
   background-color: #2e3038;
 }
 
+.main-footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .main-footer__social img {
+  cursor: pointer;
   padding-left: 16px;
 }
 /*# sourceMappingURL=app.css.map */

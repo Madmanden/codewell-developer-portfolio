@@ -30,7 +30,6 @@ body {
     size: 18px;
   }
   line-height: 27px;
-  //width: 100%;
 }
 
 .container {
@@ -220,5 +219,68 @@ body {
       cursor: pointer;
       padding-left: 16px;
     }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
+//
+//   TABLET MEDIA QUERIES
+//
+////////////////////////////////////////////////////////////////////////////
+
+@media screen and (min-width: 428px) {
+  .container {
+    max-width: 768px;
+    //margin: 0 40px;
+  }
+
+  .main-header {
+    max-width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hero {
+    max-width: 768px;
+    padding-left: 40px;
+    padding-right: 53px;
+    &__header {
+      font-size: 56px;
+      line-height: 72px;
+    }
+  }
+
+  .companies {
+    max-width: 688px;
+    column-gap: 97px;
+  }
+
+  .projects {
+    padding-left: 40px;
+    padding-right: 40px;
+    &__card {
+      padding: 0 0 56px 0;
+    }
+    &__image {
+      & img {
+        max-width: 768px;
+      }
+    }
+  }
+
+  .co-founder {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .working {
+    margin-left: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 543px;
+  }
+
+  .main-footer {
+    max-width: 768px;
   }
 }

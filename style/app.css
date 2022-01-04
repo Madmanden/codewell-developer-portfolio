@@ -251,4 +251,52 @@ body {
   cursor: pointer;
   padding-left: 16px;
 }
+
+@media screen and (min-width: 428px) {
+  .container {
+    max-width: 768px;
+  }
+  .main-header {
+    max-width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .hero {
+    max-width: 768px;
+    padding-left: 40px;
+    padding-right: 53px;
+  }
+  .hero__header {
+    font-size: 56px;
+    line-height: 72px;
+  }
+  .companies {
+    max-width: 688px;
+    -webkit-column-gap: 97px;
+            column-gap: 97px;
+  }
+  .projects {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .projects__card {
+    padding: 0 0 56px 0;
+  }
+  .projects__image img {
+    max-width: 768px;
+  }
+  .co-founder {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .working {
+    margin-left: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 543px;
+  }
+  .main-footer {
+    max-width: 768px;
+  }
+}
 /*# sourceMappingURL=app.css.map */

@@ -75,7 +75,8 @@ body {
   }
   line-height: 24px;
   color: #ffffff;
-  width: 100%;
+  //width: 100%;
+  cursor: pointer;
 }
 
 .btn {
@@ -264,6 +265,7 @@ body {
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
+        cursor: pointer;
       }
     }
   }

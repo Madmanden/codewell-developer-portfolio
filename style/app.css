@@ -311,6 +311,8 @@ body {
   }
   .projects__card {
     padding: 0 0 56px 0;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
   .projects__image img {
     max-width: 1220px;

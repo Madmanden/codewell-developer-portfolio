@@ -4,7 +4,6 @@ $button: #fbe850;
 
 // TO DO:
 // - Fix font duplication
-// - Fix grid setup
 // - Fix responsive breakpoints - minmax, clamp?
 // - Clamp padding/margin?
 
@@ -136,7 +135,6 @@ body {
   flex-wrap: wrap;
   gap: 24px;
   padding: 80px 30px; // 80px 20px
-  margin: 0 auto;
 }
 
 .projects {
@@ -241,7 +239,6 @@ body {
 
   .main-header {
     max-width: 1220px;
-    height: 136px;
     //display: flex;
     //justify-content: space-between;
 
@@ -279,14 +276,16 @@ body {
   }
 
   .companies {
-    max-width: 688px;
     max-width: 1220px;
-    column-gap: 97px;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .projects {
     display: flex;
     gap: 80px;
+    justify-content: space-between;
     padding-left: 40px;
     padding-right: 40px;
     &__card {
@@ -294,7 +293,6 @@ body {
     }
     &__image {
       & img {
-        max-width: 812px;
         max-width: 1220px;
       }
     }
@@ -339,6 +337,7 @@ body {
 
   .main-header {
     max-width: 1440px;
+    height: 136px;
     padding-left: 150px;
     padding-right: 150px;
   }
@@ -355,22 +354,15 @@ body {
 
   .companies {
     max-width: 1440px;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 150px;
+    padding-right: 150px;
     //column-gap: 97px;
+    gap: auto;
   }
 
   .projects {
     padding-left: 150px;
     padding-right: 150px;
-    &__card {
-      padding: 0 0 56px 0;
-    }
-    &__image {
-      & img {
-        max-width: 1440px;
-      }
-    }
   }
 
   .co-founder {

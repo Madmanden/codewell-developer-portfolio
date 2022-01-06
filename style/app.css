@@ -152,7 +152,6 @@ body {
       flex-wrap: wrap;
   gap: 24px;
   padding: 80px 30px;
-  margin: 0 auto;
 }
 
 .projects {
@@ -261,7 +260,6 @@ body {
   }
   .main-header {
     max-width: 1220px;
-    height: 136px;
   }
   .main-header__navlist {
     display: -webkit-box;
@@ -293,16 +291,21 @@ body {
     line-height: 72px;
   }
   .companies {
-    max-width: 688px;
     max-width: 1220px;
-    -webkit-column-gap: 97px;
-            column-gap: 97px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .projects {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 80px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -310,7 +313,6 @@ body {
     padding: 0 0 56px 0;
   }
   .projects__image img {
-    max-width: 812px;
     max-width: 1220px;
   }
   .co-founder {
@@ -340,6 +342,7 @@ body {
   }
   .main-header {
     max-width: 1440px;
+    height: 136px;
     padding-left: 150px;
     padding-right: 150px;
   }
@@ -353,18 +356,13 @@ body {
   }
   .companies {
     max-width: 1440px;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-left: 150px;
+    padding-right: 150px;
+    gap: auto;
   }
   .projects {
     padding-left: 150px;
     padding-right: 150px;
-  }
-  .projects__card {
-    padding: 0 0 56px 0;
-  }
-  .projects__image img {
-    max-width: 1440px;
   }
   .co-founder {
     padding-left: 150px;

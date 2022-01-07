@@ -5,6 +5,7 @@
           box-sizing: border-box;
 }
 
+body,
 p,
 h1,
 h2,
@@ -13,8 +14,6 @@ h3 {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   min-height: 100vh;
   background-color: #e5e5e5;
   color: white;
@@ -51,7 +50,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 40px 20px;
-  z-index: 1;
 }
 
 .main-header__hamburger {
@@ -88,9 +86,6 @@ body {
   padding: 0;
   margin: 0;
   color: #adadad;
-  font-family: Inter;
-  font-weight: 400;
-  font-size: 18px;
   line-height: 22px;
   cursor: pointer;
 }
@@ -162,6 +157,17 @@ body {
   display: none;
 }
 
+.hero__header,
+.projects__header,
+.co-founder__header,
+.working__header {
+  font-family: Prata;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #ffffff;
+}
+
 .hero {
   width: 100%;
   max-width: 812px;
@@ -169,11 +175,6 @@ body {
 }
 
 .hero__header {
-  font-family: Prata;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 49px;
-  color: #ffffff;
   padding-top: 40px;
   padding-bottom: 8px;
 }
@@ -219,11 +220,6 @@ body {
 }
 
 .projects__header {
-  font-family: Prata;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 49px;
-  color: #ffffff;
   margin-top: 24px;
 }
 
@@ -242,12 +238,6 @@ body {
 }
 
 .co-founder__header {
-  font-family: Prata;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 49px;
-  color: #ffffff;
   padding-bottom: 12px;
 }
 
@@ -262,14 +252,6 @@ body {
 .working {
   padding: 80px 20px;
   max-width: 543px;
-}
-
-.working__header {
-  font-family: Prata;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 49px;
-  color: #ffffff;
 }
 
 .working__body {

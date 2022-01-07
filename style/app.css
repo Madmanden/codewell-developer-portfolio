@@ -29,7 +29,6 @@ body {
   display: grid;
   width: 100%;
   max-width: 812px;
-  /* height: 3404px; */
   margin: 0 auto;
   background-color: black;
 }
@@ -335,13 +334,7 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 24px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
     background-color: unset;
-  }
-  .main-header__navlist li {
-    padding: 1px;
   }
   .main-header input {
     display: none;

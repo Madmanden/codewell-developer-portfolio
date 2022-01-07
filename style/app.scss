@@ -26,11 +26,13 @@ body {
   min-height: 100vh;
   background-color: #e5e5e5;
   color: white;
+
   font: {
     family: Inter;
     weight: 400;
     size: 18px;
   }
+
   line-height: 27px;
 }
 
@@ -52,10 +54,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 40px 20px;
+  z-index: 1; //
 
   &__hamburger {
     line-height: 1;
     cursor: pointer;
+
     & img {
       width: 24px;
       height: 20px;
@@ -64,7 +68,53 @@ body {
 
   &__navlist {
     display: none;
+    //width: 80%;
+    //padding-top: 50px;
+    //flex-direction: column;
+    //align-items: flex-end;
+
+    & ul {
+      position: absolute;
+      background-color: $gray;
+      top: 80px;
+      right: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      //gap: 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: $lightgray;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      cursor: pointer;
+
+      & li {
+        padding: 10px 10px;
+      }
+    }
   }
+}
+
+.main-header input {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 32px;
+  right: 18px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+.main-header input:checked ~ .main-header__navlist {
+  display: flex;
+  //justify-content: center;
 }
 
 .logo {
@@ -73,9 +123,10 @@ body {
     weight: 400;
     size: 18px;
   }
+
   line-height: 24px;
   color: #ffffff;
-  //width: 100%;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -110,6 +161,7 @@ body {
   width: 100%;
   max-width: 812px;
   padding: 0 20px;
+
   &__header {
     font-family: Prata;
     font-weight: 400;
@@ -139,6 +191,7 @@ body {
 
 .projects {
   padding-bottom: 40px; // ??
+
   &__card {
     padding: 0 20px 56px 20px;
   }
@@ -169,6 +222,7 @@ body {
   background-color: $gray;
   padding: 64px 20px;
   color: $lightgray;
+
   & p {
     padding-bottom: 24px;
   }
@@ -186,6 +240,7 @@ body {
   &__body1 p:last-child {
     padding-bottom: 80px;
   }
+
   &__body2 p:last-child {
     padding-bottom: 0;
   }
@@ -194,6 +249,7 @@ body {
 .working {
   padding: 80px 20px;
   max-width: 543px;
+
   &__header {
     font-family: Prata;
     font-weight: 400;
@@ -219,6 +275,7 @@ body {
 
   &__social {
     display: flex;
+
     & img {
       cursor: pointer;
       padding-left: 16px;
@@ -239,36 +296,45 @@ body {
 
   .main-header {
     max-width: 1220px;
+    padding-left: 40px;
+    padding-right: 40px;
     //display: flex;
     //justify-content: space-between;
 
     &__navlist {
       display: flex;
+      align-items: center;
       //margin-right: auto;
       //margin-left: auto;
       //justify-content: center; // needed?
 
       & ul {
+        top: auto;
         display: flex;
+        flex-direction: row;
+        justify-content: center;
+
         gap: 24px;
         list-style: none;
         padding: 0;
         margin: 0;
-        color: $lightgray;
-        font-family: Inter;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
-        cursor: pointer;
+        background-color: unset;
+      }
+      & li {
+        padding: 1px;
       }
     }
   }
 
+  .main-header input {
+    display: none;
+  }
+
   .hero {
     max-width: 812px;
-
     padding-left: 40px;
     padding-right: 53px;
+
     &__header {
       font-size: 56px;
       line-height: 72px;
@@ -288,10 +354,12 @@ body {
     justify-content: space-between;
     padding-left: 40px;
     padding-right: 40px;
+
     &__card {
       padding: 0 0 56px 0;
       flex-basis: 50%;
     }
+
     &__image {
       & img {
         max-width: 1220px;
@@ -346,6 +414,7 @@ body {
   .hero {
     max-width: 890px;
     padding-left: 150px;
+
     //padding-right: 53px;
     &__header {
       font-size: 56px;
